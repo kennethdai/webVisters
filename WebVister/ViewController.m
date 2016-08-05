@@ -228,7 +228,8 @@
     webVisterData[@"urls"] = [NSArray arrayWithArray:lists];
     [myRootRef setValue:webVisterData];
     
-    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+//    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];  
     currentIndex = -1;
     
 }
