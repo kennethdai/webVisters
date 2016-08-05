@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F48461F1D50AA2100094DAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F48461E1D50AA2100094DAC /* main.m */; };
+		9F4846281D50AA2100094DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4846261D50AA2100094DAC /* Main.storyboard */; };
+		9F48462A1D50AA2100094DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4846291D50AA2100094DAC /* Assets.xcassets */; };
+		9F48462D1D50AA2100094DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F48462B1D50AA2100094DAC /* LaunchScreen.storyboard */; };
+		9F4846381D50AA2100094DAC /* WebVisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4846371D50AA2100094DAC /* WebVisterTests.m */; };
+		9F4846431D50AA2100094DAC /* WebVisterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4846421D50AA2100094DAC /* WebVisterUITests.m */; };
+		9F4846571D50AA5100094DAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4846511D50AA5100094DAC /* ViewController.m */; };
+		9F4846581D50AA5100094DAC /* WVDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4846531D50AA5100094DAC /* WVDataController.m */; };
+		9F4846591D50AA5100094DAC /* WVTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4846551D50AA5100094DAC /* WVTableViewCell.m */; };
+		9F48465A1D50AA5100094DAC /* WVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4846561D50AA5100094DAC /* WVTableViewCell.xib */; };
+		9F48465D1D50AA5900094DAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F48465C1D50AA5900094DAC /* AppDelegate.m */; };
+		9F4846641D50B0D100094DAC /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846621D50B0D100094DAC /* libicucore.A.tbd */; };
+		9F4846651D50B0D100094DAC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846631D50B0D100094DAC /* libicucore.tbd */; };
+		9F4846691D50B0E700094DAC /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846661D50B0E700094DAC /* libc++.1.tbd */; };
+		9F48466A1D50B0E700094DAC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846671D50B0E700094DAC /* libc++.tbd */; };
+		9F48466B1D50B0E700094DAC /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846681D50B0E700094DAC /* libc++abi.tbd */; };
+		9F48466D1D50B0F300094DAC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48466C1D50B0F300094DAC /* CFNetwork.framework */; };
+		9F48466F1D50B0FC00094DAC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48466E1D50B0FC00094DAC /* Security.framework */; };
+		9F4846711D50B10400094DAC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846701D50B10400094DAC /* SystemConfiguration.framework */; };
+		9F4846761D50B2FD00094DAC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4846741D50B2B800094DAC /* Firebase.framework */; };
+		9FB1A9AB1D535F2A00CC8F4A /* WVOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1A9A91D535F2A00CC8F4A /* WVOverviewTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F4846341D50AA2100094DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4846121D50AA2100094DAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F4846191D50AA2100094DAC;
+			remoteInfo = WebVister;
+		};
+		9F48463F1D50AA2100094DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4846121D50AA2100094DAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F4846191D50AA2100094DAC;
+			remoteInfo = WebVister;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F48461A1D50AA2100094DAC /* WebVister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebVister.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F48461E1D50AA2100094DAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F4846271D50AA2100094DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F4846291D50AA2100094DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F48462C1D50AA2100094DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F48462E1D50AA2100094DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4846331D50AA2100094DAC /* WebVisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebVisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4846371D50AA2100094DAC /* WebVisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebVisterTests.m; sourceTree = "<group>"; };
+		9F4846391D50AA2100094DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F48463E1D50AA2100094DAC /* WebVisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebVisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4846421D50AA2100094DAC /* WebVisterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebVisterUITests.m; sourceTree = "<group>"; };
+		9F4846441D50AA2100094DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4846501D50AA5100094DAC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9F4846511D50AA5100094DAC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F4846521D50AA5100094DAC /* WVDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVDataController.h; sourceTree = "<group>"; };
+		9F4846531D50AA5100094DAC /* WVDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVDataController.m; sourceTree = "<group>"; };
+		9F4846541D50AA5100094DAC /* WVTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVTableViewCell.h; sourceTree = "<group>"; };
+		9F4846551D50AA5100094DAC /* WVTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVTableViewCell.m; sourceTree = "<group>"; };
+		9F4846561D50AA5100094DAC /* WVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVTableViewCell.xib; sourceTree = "<group>"; };
+		9F48465B1D50AA5900094DAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F48465C1D50AA5900094DAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F4846621D50B0D100094DAC /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		9F4846631D50B0D100094DAC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		9F4846661D50B0E700094DAC /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		9F4846671D50B0E700094DAC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9F4846681D50B0E700094DAC /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		9F48466C1D50B0F300094DAC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9F48466E1D50B0FC00094DAC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9F4846701D50B10400094DAC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9F4846741D50B2B800094DAC /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = WebVister/Firebase.framework; sourceTree = "<group>"; };
+		9FB1A9A91D535F2A00CC8F4A /* WVOverviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVOverviewTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F4846171D50AA2100094DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4846761D50B2FD00094DAC /* Firebase.framework in Frameworks */,
+				9F4846711D50B10400094DAC /* SystemConfiguration.framework in Frameworks */,
+				9F48466F1D50B0FC00094DAC /* Security.framework in Frameworks */,
+				9F48466D1D50B0F300094DAC /* CFNetwork.framework in Frameworks */,
+				9F4846691D50B0E700094DAC /* libc++.1.tbd in Frameworks */,
+				9F48466A1D50B0E700094DAC /* libc++.tbd in Frameworks */,
+				9F48466B1D50B0E700094DAC /* libc++abi.tbd in Frameworks */,
+				9F4846641D50B0D100094DAC /* libicucore.A.tbd in Frameworks */,
+				9F4846651D50B0D100094DAC /* libicucore.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4846301D50AA2100094DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F48463B1D50AA2100094DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		791C907080E19C8BD3C9289E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F4846741D50B2B800094DAC /* Firebase.framework */,
+				9F4846701D50B10400094DAC /* SystemConfiguration.framework */,
+				9F48466E1D50B0FC00094DAC /* Security.framework */,
+				9F48466C1D50B0F300094DAC /* CFNetwork.framework */,
+				9F4846661D50B0E700094DAC /* libc++.1.tbd */,
+				9F4846671D50B0E700094DAC /* libc++.tbd */,
+				9F4846681D50B0E700094DAC /* libc++abi.tbd */,
+				9F4846621D50B0D100094DAC /* libicucore.A.tbd */,
+				9F4846631D50B0D100094DAC /* libicucore.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F4846111D50AA2100094DAC = {
+			isa = PBXGroup;
+			children = (
+				9F48461C1D50AA2100094DAC /* WebVister */,
+				9F4846361D50AA2100094DAC /* WebVisterTests */,
+				9F4846411D50AA2100094DAC /* WebVisterUITests */,
+				9F48461B1D50AA2100094DAC /* Products */,
+				791C907080E19C8BD3C9289E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9F48461B1D50AA2100094DAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F48461A1D50AA2100094DAC /* WebVister.app */,
+				9F4846331D50AA2100094DAC /* WebVisterTests.xctest */,
+				9F48463E1D50AA2100094DAC /* WebVisterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F48461C1D50AA2100094DAC /* WebVister */ = {
+			isa = PBXGroup;
+			children = (
+				9F48465B1D50AA5900094DAC /* AppDelegate.h */,
+				9F48465C1D50AA5900094DAC /* AppDelegate.m */,
+				9F4846501D50AA5100094DAC /* ViewController.h */,
+				9F4846511D50AA5100094DAC /* ViewController.m */,
+				9F4846521D50AA5100094DAC /* WVDataController.h */,
+				9F4846531D50AA5100094DAC /* WVDataController.m */,
+				9F4846541D50AA5100094DAC /* WVTableViewCell.h */,
+				9F4846551D50AA5100094DAC /* WVTableViewCell.m */,
+				9F4846561D50AA5100094DAC /* WVTableViewCell.xib */,
+				9FB1A9A91D535F2A00CC8F4A /* WVOverviewTableViewCell.xib */,
+				9F4846291D50AA2100094DAC /* Assets.xcassets */,
+				9F48462B1D50AA2100094DAC /* LaunchScreen.storyboard */,
+				9F48462E1D50AA2100094DAC /* Info.plist */,
+				9F48461D1D50AA2100094DAC /* Supporting Files */,
+			);
+			path = WebVister;
+			sourceTree = "<group>";
+		};
+		9F48461D1D50AA2100094DAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F4846261D50AA2100094DAC /* Main.storyboard */,
+				9F48461E1D50AA2100094DAC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F4846361D50AA2100094DAC /* WebVisterTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F4846371D50AA2100094DAC /* WebVisterTests.m */,
+				9F4846391D50AA2100094DAC /* Info.plist */,
+			);
+			path = WebVisterTests;
+			sourceTree = "<group>";
+		};
+		9F4846411D50AA2100094DAC /* WebVisterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F4846421D50AA2100094DAC /* WebVisterUITests.m */,
+				9F4846441D50AA2100094DAC /* Info.plist */,
+			);
+			path = WebVisterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F4846191D50AA2100094DAC /* WebVister */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4846471D50AA2100094DAC /* Build configuration list for PBXNativeTarget "WebVister" */;
+			buildPhases = (
+				9F4846161D50AA2100094DAC /* Sources */,
+				9F4846171D50AA2100094DAC /* Frameworks */,
+				9F4846181D50AA2100094DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebVister;
+			productName = WebVister;
+			productReference = 9F48461A1D50AA2100094DAC /* WebVister.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F4846321D50AA2100094DAC /* WebVisterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F48464A1D50AA2100094DAC /* Build configuration list for PBXNativeTarget "WebVisterTests" */;
+			buildPhases = (
+				9F48462F1D50AA2100094DAC /* Sources */,
+				9F4846301D50AA2100094DAC /* Frameworks */,
+				9F4846311D50AA2100094DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F4846351D50AA2100094DAC /* PBXTargetDependency */,
+			);
+			name = WebVisterTests;
+			productName = WebVisterTests;
+			productReference = 9F4846331D50AA2100094DAC /* WebVisterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F48463D1D50AA2100094DAC /* WebVisterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F48464D1D50AA2100094DAC /* Build configuration list for PBXNativeTarget "WebVisterUITests" */;
+			buildPhases = (
+				9F48463A1D50AA2100094DAC /* Sources */,
+				9F48463B1D50AA2100094DAC /* Frameworks */,
+				9F48463C1D50AA2100094DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F4846401D50AA2100094DAC /* PBXTargetDependency */,
+			);
+			name = WebVisterUITests;
+			productName = WebVisterUITests;
+			productReference = 9F48463E1D50AA2100094DAC /* WebVisterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F4846121D50AA2100094DAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = KennethDai;
+				TargetAttributes = {
+					9F4846191D50AA2100094DAC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9F4846321D50AA2100094DAC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9F4846191D50AA2100094DAC;
+					};
+					9F48463D1D50AA2100094DAC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9F4846191D50AA2100094DAC;
+					};
+				};
+			};
+			buildConfigurationList = 9F4846151D50AA2100094DAC /* Build configuration list for PBXProject "WebVister" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F4846111D50AA2100094DAC;
+			productRefGroup = 9F48461B1D50AA2100094DAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F4846191D50AA2100094DAC /* WebVister */,
+				9F4846321D50AA2100094DAC /* WebVisterTests */,
+				9F48463D1D50AA2100094DAC /* WebVisterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F4846181D50AA2100094DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F48465A1D50AA5100094DAC /* WVTableViewCell.xib in Resources */,
+				9F48462D1D50AA2100094DAC /* LaunchScreen.storyboard in Resources */,
+				9F48462A1D50AA2100094DAC /* Assets.xcassets in Resources */,
+				9F4846281D50AA2100094DAC /* Main.storyboard in Resources */,
+				9FB1A9AB1D535F2A00CC8F4A /* WVOverviewTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4846311D50AA2100094DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F48463C1D50AA2100094DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F4846161D50AA2100094DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4846591D50AA5100094DAC /* WVTableViewCell.m in Sources */,
+				9F4846571D50AA5100094DAC /* ViewController.m in Sources */,
+				9F48461F1D50AA2100094DAC /* main.m in Sources */,
+				9F4846581D50AA5100094DAC /* WVDataController.m in Sources */,
+				9F48465D1D50AA5900094DAC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F48462F1D50AA2100094DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4846381D50AA2100094DAC /* WebVisterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F48463A1D50AA2100094DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4846431D50AA2100094DAC /* WebVisterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F4846351D50AA2100094DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F4846191D50AA2100094DAC /* WebVister */;
+			targetProxy = 9F4846341D50AA2100094DAC /* PBXContainerItemProxy */;
+		};
+		9F4846401D50AA2100094DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F4846191D50AA2100094DAC /* WebVister */;
+			targetProxy = 9F48463F1D50AA2100094DAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F4846261D50AA2100094DAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4846271D50AA2100094DAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F48462B1D50AA2100094DAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F48462C1D50AA2100094DAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F4846451D50AA2100094DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F4846461D50AA2100094DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F4846481D50AA2100094DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WebVister",
+				);
+				INFOPLIST_FILE = WebVister/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVister;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9F4846491D50AA2100094DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WebVister",
+				);
+				INFOPLIST_FILE = WebVister/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVister;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9F48464B1D50AA2100094DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WebVisterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVisterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebVister.app/WebVister";
+			};
+			name = Debug;
+		};
+		9F48464C1D50AA2100094DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WebVisterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVisterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebVister.app/WebVister";
+			};
+			name = Release;
+		};
+		9F48464E1D50AA2100094DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WebVisterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVisterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WebVister;
+			};
+			name = Debug;
+		};
+		9F48464F1D50AA2100094DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WebVisterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVisterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WebVister;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F4846151D50AA2100094DAC /* Build configuration list for PBXProject "WebVister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4846451D50AA2100094DAC /* Debug */,
+				9F4846461D50AA2100094DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4846471D50AA2100094DAC /* Build configuration list for PBXNativeTarget "WebVister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4846481D50AA2100094DAC /* Debug */,
+				9F4846491D50AA2100094DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F48464A1D50AA2100094DAC /* Build configuration list for PBXNativeTarget "WebVisterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F48464B1D50AA2100094DAC /* Debug */,
+				9F48464C1D50AA2100094DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F48464D1D50AA2100094DAC /* Build configuration list for PBXNativeTarget "WebVisterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F48464E1D50AA2100094DAC /* Debug */,
+				9F48464F1D50AA2100094DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F4846121D50AA2100094DAC /* Project object */;
+}
