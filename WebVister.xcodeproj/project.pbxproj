@@ -267,6 +267,7 @@
 				TargetAttributes = {
 					9F4846191D50AA2100094DAC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = B7AT489PWX;
 					};
 					9F4846321D50AA2100094DAC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -479,13 +480,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B7AT489PWX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WebVister",
 				);
 				INFOPLIST_FILE = WebVister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVister;
+				PRODUCT_BUNDLE_IDENTIFIER = webVister.ps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -494,13 +496,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B7AT489PWX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WebVister",
 				);
 				INFOPLIST_FILE = WebVister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KennethD.WebVister;
+				PRODUCT_BUNDLE_IDENTIFIER = webVister.ps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
