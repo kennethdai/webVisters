@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WebVister/ViewController.m"
-            timestampString = "492085580.20874"
+            timestampString = "498378592.162494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WebVister/ViewController.m"
-            timestampString = "492085580.20874"
+            timestampString = "498378592.162494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-getNewData"
             landmarkType = "7">
          </BreakpointContent>
@@ -60,28 +60,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WebVister/ViewController.m"
-            timestampString = "492086164.777161"
+            timestampString = "498378694.659827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
             landmarkName = "-deleteAnURL:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WebVister/ViewController.m"
-            timestampString = "498364225.558834"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-getNewData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

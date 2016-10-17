@@ -22,9 +22,12 @@
     NSTimer *timer;
     Firebase *myRootRef;
     UIViewController *webViewC;
-    
     int currentIndex;
+    BOOL isAdmin;
+    int timesTapped;
     
+    NSString *customerStr;
+    UIWebView *custromerWebView;
 }
 
 @end
@@ -62,15 +65,49 @@
     timer = [NSTimer scheduledTimerWithTimeInterval:(timeInterval < 600) ? 600 : timeInterval  target:self selector:@selector(reloadWVData) userInfo:nil repeats:YES];
     [timer fire];
     
-    //不让手机休眠.
-    [UIApplication sharedApplication].idleTimerDisabled =YES;
-    
     myRootRef = [[Firebase alloc] initWithUrl:LINK_WebVister];
     // Write data to Firebase
 //    [myRootRef setValue:@[@"www.bing.com", @"www.baidu.com", @"www.google.com"]];
     currentIndex = -1;
-    [self getNewData];
 
+    NSUserDefaults *userInfo = [NSUserDefaults standardUserDefaults];
+    [userInfo setObject:@"0" forKey:@"isAdmin"];
+    if ([[userInfo valueForKey:@"isAdmin"] isEqualToString:@"1"])
+    {
+        isAdmin = YES;
+        //不让手机休眠.
+        [UIApplication sharedApplication].idleTimerDisabled =YES;
+        [self.navigationController setNavigationBarHidden:NO];
+        custromerWebView.hidden = YES;
+        scrollView.hidden = NO;
+        [self getNewData];
+    } else {
+        isAdmin = NO;
+        
+        scrollView.hidden = YES;
+        [self.navigationController setNavigationBarHidden:YES];
+        [self loadWebViewWithURL:customerStr ? customerStr : @"baidu.com"];
+    }
+}
+
+- (void)loadAdminData
+{
+    isAdmin = YES;
+    //不让手机休眠.
+    [UIApplication sharedApplication].idleTimerDisabled =YES;
+    [self.navigationController setNavigationBarHidden:NO];
+    [custromerWebView removeFromSuperview];
+    scrollView.hidden = NO;
+    [self getNewData];
+}
+
+- (void)loadCustomerData
+{
+    isAdmin = NO;
+    scrollView.hidden = YES;
+    urlList = nil;
+    [self.navigationController setNavigationBarHidden:YES];
+    [self loadWebViewWithURL:customerStr ? customerStr : @"baidu.com"];
 }
 
 - (void)getNewData
@@ -80,6 +117,7 @@
         if ([webVisterData isKindOfClass:[NSDictionary class]])
         {
             urlList = webVisterData[@"urls"];
+            customerStr = urlList.firstObject;
             NSNumber *interval = webVisterData[@"duration"];
             timeInterval = interval.doubleValue;
             if (timeInterval) {
@@ -97,7 +135,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self updateViewsFrame];    
+    [super viewDidAppear:animated];
+    [self updateViewsFrame];
 }
 
 - (void)reloadWVData
@@ -165,7 +204,7 @@
     
 }
 
-- (double)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (displayMode == WVDisplayOverview)
     {
@@ -199,7 +238,50 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"删除" style:UIBarButtonItemStylePlain target:self action:@selector(conformToDeleteURL:)];
     webViewC.navigationItem.rightBarButtonItem = rightButton;
     [self.navigationController pushViewController:webViewC animated:YES];
+    [self.navigationController setToolbarHidden:YES animated:YES];
 
+}
+
+- (void)loadWebViewWithURL:(NSString *)urlStr
+{
+    CGRect screenFrame = [UIScreen mainScreen].bounds;
+    custromerWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 20, screenFrame.size.width, screenFrame.size.height - 20)];
+    custromerWebView.scalesPageToFit = YES;
+    
+    if (!([urlStr rangeOfString:@"http://"].length && [urlStr rangeOfString:@"https://"].length))
+    {
+        urlStr = [NSString stringWithFormat:@"http://%@",urlStr];
+    }
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+    
+    [custromerWebView loadRequest:urlRequest];
+    [self.view addSubview:custromerWebView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    UIButton *switchBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, screenFrame.size.height - 40, 40, 40)];
+    switchBtn.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:switchBtn];
+    [switchBtn addTarget:self action:@selector(onSwitchBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)onSwitchBtnTapped
+{
+    timesTapped += 1;
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    
+    
+    if (timesTapped / 10 == 1.)
+    {
+        [self loadAdminData];
+        [userDefault setObject:@"1" forKey:@"isAdmin"];
+    } else if (timesTapped / 10 == 2.){
+        timesTapped = 0;
+        [userDefault setObject:@"0" forKey:@"isAdmin"];
+        [self loadCustomerData];
+    }
+        
 }
 
 - (void) conformToDeleteURL:(NSString *)url
@@ -225,6 +307,7 @@
     if (currentIndex >= 0) {
         [lists removeObjectAtIndex:currentIndex];
     }
+    if (lists) customerStr = lists.firstObject;
     webVisterData[@"urls"] = [NSArray arrayWithArray:lists];
     [myRootRef setValue:webVisterData];
     
