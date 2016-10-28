@@ -20,12 +20,11 @@
     UIScrollView *scrollView;
     double timeInterval;
     NSTimer *timer;
-    Firebase *myRootRef;
     UIViewController *webViewC;
     int currentIndex;
     BOOL isAdmin;
     int timesTapped;
-    
+    UIButton *switchBtn;
     NSString *customerStr;
     UIWebView *custromerWebView;
 }
@@ -65,9 +64,6 @@
     timer = [NSTimer scheduledTimerWithTimeInterval:(timeInterval < 600) ? 600 : timeInterval  target:self selector:@selector(reloadWVData) userInfo:nil repeats:YES];
     [timer fire];
     
-    myRootRef = [[Firebase alloc] initWithUrl:LINK_WebVister];
-    // Write data to Firebase
-//    [myRootRef setValue:@[@"www.bing.com", @"www.baidu.com", @"www.google.com"]];
     currentIndex = -1;
 
     NSUserDefaults *userInfo = [NSUserDefaults standardUserDefaults];
@@ -88,6 +84,19 @@
         [self.navigationController setNavigationBarHidden:YES];
         [self loadWebViewWithURL:customerStr ? customerStr : @"baidu.com"];
     }
+    
+    urlList = [userInfo valueForKey:@"urlList"];
+    if (!urlList) {
+        urlList = @[];
+    }
+    
+    
+    
+    switchBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, [UIScreen mainScreen].bounds.size.height - 50, 100, 40)];
+    switchBtn.backgroundColor = [UIColor clearColor];
+    [switchBtn setTitle:nil forState:UIControlStateNormal];
+    [self.view addSubview:switchBtn];
+    [switchBtn addTarget:self action:@selector(onSwitchBtnTapped) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)loadAdminData
@@ -111,24 +120,16 @@
 
 - (void)getNewData
 {
-    [myRootRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        webVisterData = snapshot.value;
-        if ([webVisterData isKindOfClass:[NSDictionary class]])
-        {
-            urlList = webVisterData[@"urls"];
-            customerStr = urlList.firstObject;
-            NSNumber *interval = webVisterData[@"duration"];
-            timeInterval = interval.doubleValue;
-            if (timeInterval) {
-                timer = [NSTimer scheduledTimerWithTimeInterval:(timeInterval < 600) ? 600 : timeInterval  target:self selector:@selector(reloadWVData) userInfo:nil repeats:YES];
-                //                timer.timeInterval = timeInterval;
-                [timer fire];
-            }
-            [self reloadWVData];
-        }
-        
-        //        NSLog(@"%@ -> %@", snapshot.key.class, snapshot.value);
-    }];
+    customerStr = urlList.firstObject;
+    NSNumber *interval = webVisterData[@"duration"];
+    timeInterval = interval.doubleValue;
+    if (timeInterval) {
+        timer = [NSTimer scheduledTimerWithTimeInterval:(timeInterval < 600) ? 600 : timeInterval  target:self selector:@selector(reloadWVData) userInfo:nil repeats:YES];
+        //                timer.timeInterval = timeInterval;
+        [timer fire];
+    }
+    [self reloadWVData];
+    
 }
                       
 
@@ -158,6 +159,7 @@
     WVMode mode = (displayMode == WVDisplayOverview)?WVDisplayDetails : WVDisplayOverview;
     displayMode = mode;
     [viewsTableView reloadData];
+    [self updateViewsFrame];
     [self viewDidAppear:YES];
 }
 
@@ -181,11 +183,11 @@
         if (!normalCell) {
             normalCell = [[NSBundle mainBundle] loadNibNamed:@"WVOverviewTableViewCell" owner:self options:nil].firstObject;
         }
-//        normalCell.backgroundColor = ((indexPath.row % 2) == 0) ? [UIColor colorWithRed:240 / 255.0 green:248 / 255. blue:255 / 255. alpha:1] : [UIColor colorWithRed:240 / 255.0 green:255 / 255. blue:255 / 255. alpha:1];
         [normalCell loadViewWithUrl:urlList[indexPath.row]];
         normalCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return normalCell;
     } else {
+        NSLog(@"Nil cell");
         return nil;
     }
     
@@ -257,11 +259,7 @@
     [self.view addSubview:custromerWebView];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
-    UIButton *switchBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, screenFrame.size.height - 40, 40, 40)];
-    switchBtn.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:switchBtn];
-    [switchBtn addTarget:self action:@selector(onSwitchBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)onSwitchBtnTapped
@@ -271,13 +269,18 @@
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     
     
-    if (timesTapped / 10 == 1.)
+    if (timesTapped == 10)
     {
         [self loadAdminData];
         [userDefault setObject:@"1" forKey:@"isAdmin"];
-    } else if (timesTapped / 10 == 2.){
+        switchBtn.backgroundColor = [UIColor redColor];
+        [switchBtn setTitle:@"用户模式" forState:UIControlStateNormal];
+        timesTapped = 100;
+    } else if (timesTapped > 99){
         timesTapped = 0;
         [userDefault setObject:@"0" forKey:@"isAdmin"];
+        switchBtn.backgroundColor = [UIColor clearColor];
+        [switchBtn setTitle:@"" forState:UIControlStateNormal];
         [self loadCustomerData];
     }
         
@@ -307,13 +310,12 @@
         [lists removeObjectAtIndex:currentIndex];
     }
     if (lists) customerStr = lists.firstObject;
-    webVisterData[@"urls"] = [NSArray arrayWithArray:lists];
-    [myRootRef setValue:webVisterData];
-    
-//    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+    urlList = lists;
     [self.navigationController popViewControllerAnimated:YES];
     currentIndex = -1;
-    
+    [viewsTableView reloadData];
+    [self updateViewsFrame];
+    [self saveUserData];
 }
 
 
@@ -334,10 +336,9 @@
             [newURLList addObjectsFromArray:[NSArray arrayWithArray: urlList]];
             
             urlList = newURLList;
-            if (1== 1)
-            {
-                [self saveURLChanges];
-            }
+            [self saveUserData];
+            [viewsTableView reloadData];
+            [self updateViewsFrame];
         }
         
     }];
@@ -353,14 +354,10 @@
     
 }
 
-- (void)saveURLChanges
+- (void)saveUserData
 {
-    NSArray *newURLList = urlList;
-    webVisterData[@"urls"] = newURLList;
-//    Firebase *fb = [[Firebase alloc] initWithUrl:LINK_URLAddress];
-    
-    [myRootRef setValue:webVisterData];
-    
+    NSUserDefaults *userInfo = [NSUserDefaults standardUserDefaults];
+    [userInfo setObject:urlList forKey:@"urlList"];
 }
 
 - (void)didReceiveMemoryWarning {
