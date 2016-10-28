@@ -32,9 +32,9 @@
 
 @end
 
-#define LINK_WebVister @"https://webvister.firebaseio.com/"
-#define LINK_URLAddress @"https://webvister.firebaseio.com/urls"
-#define LINK_Duration @"https://webvister.firebaseio.com/duration/"
+#define LINK_WebVister @"https://webvister-23990.firebaseio.com/"
+#define LINK_URLAddress @"https://webvister-23990.firebaseio.com/urls"
+#define LINK_Duration @"https://webvister-23990.firebaseio.com/duration/"
 
 @implementation ViewController
 
@@ -105,7 +105,6 @@
 {
     isAdmin = NO;
     scrollView.hidden = YES;
-    urlList = nil;
     [self.navigationController setNavigationBarHidden:YES];
     [self loadWebViewWithURL:customerStr ? customerStr : @"baidu.com"];
 }
